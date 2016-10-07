@@ -1,0 +1,235 @@
+<ion-view view-title="Feeds" ng-controller="FeedsCtrl" ng-init="init()">
+
+	<ion-nav-buttons side="primary">
+		<button class="button pos-right-btn edit-but-right" ng-click="edit()">
+
+			Edit
+		</button>
+	</ion-nav-buttons>
+
+
+	<ion-content>
+
+		<div class="wrapper">
+
+			<!--
+<div class="grades-detail">
+<div class="which-class">Class:</div>
+
+<div class="class-detail" ng-repeat="class in checked_classes">{{class}}{{$last ? '' : ','}}</div>
+
+
+<a href="index.html#/campusAndClasses" class="class-edit">Edit</a>
+</div>
+-->
+
+
+			<div class="content-wrapper">
+
+				<div class="cant-load" style="display: none">
+					cant load
+				</div>
+
+				<!--<div class="msg-div" ng-click="goAlerts();" ng-show="toggle_alerts">
+					You Have Received New Notification
+				</div>-->
+
+				<div id="loading-image" class="center-gif" style="display: none">
+					<img ng-src="img/ajax-loader.gif">
+				</div>
+
+				<div class="dates-row" ng-repeat="feed in feeds">
+
+
+
+					<div class="dates-row-child">
+
+						<div class="date-left-col">
+
+							<!--<img src="img/holiday-icon.png" class="date-icon">-->
+
+							<div class="left-col-date">
+
+								<div class="d-month">
+									{{feed.month}}
+								</div>
+
+								<div class="d-date">
+									{{feed.day}}
+								</div>
+
+								<div class="d-year">
+									{{feed.year}}
+								</div>
+
+
+							</div>
+
+
+							<div class="social-feed-icon">
+
+
+								<img ng-src="img/{{feed.category}}.svg" ng-if="feed.category.startsWith('Twitter') ||
+														   feed.category.startsWith('Facebook')
+														   
+														   
+														   ">
+
+							</div>
+
+
+
+						</div>
+
+
+
+						<div class="date-right-col">
+
+
+
+							<div class="holiday-name" ng-if="feed.category.startsWith('General')">{{feed.title}}
+
+								<div ng-if="feed.category.startsWith('General')" style="font-size: 15px;display: inline-block;">
+									( {{feed.class_edit}} )
+								</div>
+
+
+
+							</div>
+
+
+							<div class="holiday-detail more"> {{feed.description}} </div>
+							<div style="height : 180px" class="imgLiquidFill imgLiquid" ng-if="feed.category.startsWith('General') ||
+														   feed.category.startsWith('Facebook')
+														   
+														   
+														   ">
+								<img ng-src="{{feed.image}}" class="responsive-img" ng-click="showImages(feed.image)" style="width:100%">
+
+							</div>
+
+
+						</div>
+
+
+					</div>
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<div class="bottom-margin-big">
+
+				</div>
+
+
+			</div>
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</ion-content>
+
+	<div class="bottom-nav">
+
+
+		<a href="#/alerts" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_alerts.svg">
+
+				<div class="notifications-alert" ng-show="toggle_alerts">
+					{{alertsPopUp}}
+				</div>
+
+			</div>
+
+			<div class="bottom-nav-text"> Alerts</div>
+
+		</a>
+
+		<a href="#/calendar" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_calendar.svg">
+
+			</div>
+
+			<div class="bottom-nav-text"> Calendar </div>
+
+		</a>
+
+
+
+		<a href="#/feeds" class="bottom-nav-button-active">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_feeds_on.svg">
+
+			</div>
+
+
+			<div class="bottom-nav-text"> Feeds </div>
+
+		</a>
+
+
+
+		<a href="#/settings" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_settings.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Settings </div>
+
+		</a>
+
+
+		<a href="#/contact" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_contact.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Contact </div>
+
+		</a>
+
+
+
+
+	</div>
+
+
+</ion-view>

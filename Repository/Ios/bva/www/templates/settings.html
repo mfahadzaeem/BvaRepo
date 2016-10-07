@@ -1,0 +1,315 @@
+<ion-view view-title="Settings" ng-controller="SettingCtrl" ng-init="init()">
+	<ion-content>
+		<div class="wrapper">
+
+
+			<div class="content-wrapper">
+
+				<div class="cant-load">
+					cant load
+				</div>
+
+				<div class="msg-div" ng-click="goAlerts();" ng-show="toggle_alerts">
+					You Have Received New Notification
+				</div>
+				<div class="settings-sub-heading-row">
+
+					<div class="settings-sub-heading">FEED</div>
+
+				</div>
+
+
+				<a href="index.html#/campusAndClasses" class="settings-option-row">
+
+
+
+					<div class="options-col-left">Campus</div>
+
+
+					<div class="options-col-right">{{campus}}
+
+						<img src="img/right-arrow.png" class="settings-right-arrow">
+
+					</div>
+
+
+				</a>
+
+				<a href="index.html#/campusAndClasses" class="settings-option-row">
+
+
+
+					<div class="options-col-left">Classes</div>
+
+
+
+					<div class="options-col-right">
+
+
+
+						<div class="settings-class-position">
+
+							<div style="display: inline-block" ng-repeat="class in classes">{{class}}{{$last ? '...' : ','}}
+
+							</div>
+
+							<img src="img/right-arrow.png" class="settings-right-arrow">
+
+						</div>
+
+
+
+
+
+
+
+
+					</div>
+
+
+				</a>
+
+
+
+				<!--	<div class="settings-sub-heading-row">
+
+					<div class="settings-sub-heading">NOTIFICATIONS</div>
+
+				</div>-->
+
+
+
+
+
+				<!--<a href="#" class="settings-option-row">
+
+
+
+					<div class="options-col-left">All Notifications</div>
+
+
+					<div class="options-col-right">
+
+						<label class="onoffbtn">
+							<input type="checkbox">
+						</label>
+
+
+
+					</div>
+
+
+				</a>-->
+
+
+
+				<div class="settings-sub-heading-row">
+
+					<div class="settings-sub-heading">CONNECT WITH US</div>
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<div class="settings-option-row">
+					<div class="options-col-left"><img src="img/fb-icon.png" class="social-icon-setting"> Facebook</div>
+					<div class="options-col-right">
+						<label class="onoffbtn " id="facebook">
+
+							<input type="checkbox" value="facebook" id="facebook_checkbox">
+						</label>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="settings-option-row">
+					<div class="options-col-left"><img src="img/twitter-icon.png" class="social-icon-setting"> Twitter</div>
+					<div class="options-col-right">
+						<label class="onoffbtn " id="twitter">
+
+							<input type="checkbox" value="twitter" id="twitter_checkbox">
+						</label>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<div class="settings-sub-heading-row">
+
+					<div class="settings-sub-heading">About us</div>
+
+				</div>
+
+
+
+				<a href="main_app.html#/contact" class="settings-option-row">
+
+
+
+					<div class="options-col-left">About BVA</div>
+
+
+					<div class="options-col-right">
+
+						<img src="img/right-arrow.png" class="settings-right-arrow">
+
+					</div>
+
+
+				</a>
+
+
+
+				<div class="version-row">
+
+					<div class="settings-sub-heading version">Version: 1.1</div>
+
+				</div>
+
+				<div class="bottom-margin">
+
+				</div>
+
+				<div class="bottom-margin">
+
+				</div>
+
+				<div class="bottom-margin">
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<div class="bottom-margin-big">
+
+				</div>
+
+
+
+
+
+			</div>
+
+
+		</div>
+
+
+		<!--<script>
+			$('.onoffbtn').on('click', function () {
+				if ($(this).children().is(':checked')) {
+					$(this).removeClass('active');
+				} else {
+					$(this).addClass('active');
+				}
+			});
+		</script>-->
+
+	</ion-content>
+	<div class="bottom-nav">
+
+
+		<a href="main_app.html#/alerts" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_alerts.svg">
+				<div class="notifications-alert" ng-show="toggle_alerts">
+					{{alertsPopUp}}
+				</div>
+
+
+			</div>
+
+			<div class="bottom-nav-text"> Alerts</div>
+
+		</a>
+
+		<a href="main_app.html#/calendar" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_calendar.svg">
+
+			</div>
+
+			<div class="bottom-nav-text"> Calendar </div>
+
+		</a>
+
+
+
+		<a href="main_app.html#/feeds" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_feeds.svg">
+
+			</div>
+
+
+			<div class="bottom-nav-text"> Feeds </div>
+
+		</a>
+
+
+
+		<a href="main_app.html#/settings" class="bottom-nav-button-active">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_settings_on.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Settings </div>
+
+		</a>
+
+
+		<a href="main_app.html#/contact" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_contact.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Contact </div>
+
+		</a>
+
+
+
+
+	</div>
+</ion-view>

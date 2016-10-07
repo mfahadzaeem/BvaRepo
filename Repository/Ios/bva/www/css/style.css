@@ -1,0 +1,41 @@
+/* Empty. Add your own CSS if you like */
+.phone-login {
+  background: #dbebf6 none repeat scroll 0 0;
+  border: 2px solid #2e337e;
+  border-radius: 20px;
+  color: #000;
+  display: inline-block;
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 10px !important;
+  text-align: center;
+  width: 80%;
+}
+
+
+.error {
+  color: #f00;
+  margin-top: 15px;
+}
+
+
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+  color: #111;
+  display: block;
+  font-size: 14px;
+  height: 41px;
+  line-height: 16px;
+  padding-left: 0;
+  padding-top: 2px;
+  vertical-align: middle;
+}
+
+
+.accordion-content .checkbox {
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px;
+  position: relative;
+  width: 100%;
+}

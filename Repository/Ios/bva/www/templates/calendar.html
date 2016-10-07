@@ -1,0 +1,134 @@
+<ion-view view-title="Calendar" ng-controller="CalendarCtrl" ng-init="init()">
+	<ion-content>
+
+
+		<div class="wrapper">
+
+
+
+
+			<div class="content-wrapper">
+
+
+				<div class="cant-load">
+					cant load
+				</div>
+				<div class="msg-div" ng-click="goAlerts();" ng-show="toggle_alerts">
+					You Have Received New Notification
+				</div>
+
+				<div id="main">
+					<div id="calendar"></div>
+
+					<div class="bottom-margin"> </div>
+					<div class="bottom-margin"> </div>
+					<div class="bottom-margin"> </div>
+
+					<div id="dialog">
+						<p id="paragraph"></p>
+					</div>
+
+				</div>
+
+
+				<div class="bottom-margin-big">
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+		</div>
+
+
+	</ion-content>
+	<div class="bottom-nav">
+
+
+		<a href="#/alerts" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_alerts.svg">
+
+				<div class="notifications-alert" ng-show="toggle_alerts">
+					{{alertsPopUp}}
+				</div>
+
+			</div>
+
+			<div class="bottom-nav-text"> Alerts</div>
+
+		</a>
+
+		<a href="#/calendar" class="bottom-nav-button-active">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_calendar_on.svg">
+
+			</div>
+
+			<div class="bottom-nav-text"> Calendar </div>
+
+		</a>
+
+
+
+		<a href="#/feeds" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_feeds.svg">
+
+			</div>
+
+
+			<div class="bottom-nav-text"> Feeds </div>
+
+		</a>
+
+
+
+		<a href="#/settings" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_settings.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Settings </div>
+
+		</a>
+
+
+		<a href="#/contact" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_contact.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Contact </div>
+
+		</a>
+
+
+
+
+	</div>
+</ion-view>

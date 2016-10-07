@@ -1,0 +1,260 @@
+<ion-view view-title="Select" ng-controller="CampusAndClassCtrl">
+
+	<ion-nav-buttons side="primary">
+		<button class="button" ng-click="registration()">
+
+			Done
+		</button>
+	</ion-nav-buttons>
+
+
+	<ion-content>
+		<div class="wrapper">
+
+			<header>
+
+				<!--
+                <a href="#" class="back-btn">
+
+                  <img src="img/back-icon.svg">
+
+                </a>-->
+
+
+				<!--Select
+
+
+
+        <a class="header-right" href="#">
+
+          DONE
+
+        </a>-->
+
+
+				<div class="dropdownbox">
+					<p id="campus">Select Campus</p>
+
+					<img src="img/white-dropdown.png" class="campus-arrow">
+
+				</div>
+
+
+				<ul class="campuses" id="dropdown_menu">
+					<li>PECHS CAMPUS</li>
+					<li>CLIFTON CAMPUS</li>
+					<li>DEFENCE CAMPUS</li>
+
+				</ul>
+
+
+			</header>
+
+
+			<div class="content-wrapper">
+
+				
+
+				<ul class="accordion" id="accordion_error">
+
+
+
+
+
+
+
+
+
+					<li>
+						<a>PRIMARY</a>
+
+
+
+
+
+						<div class="accordion-content">
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 1" name="CLASS ONE">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Kindergarten
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 2" name="CLASS TWO">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class I
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 3" name="CLASS THREE">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class II
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 4" name="CLASS FOUR">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class III
+								</label>
+							</div>
+
+
+						</div>
+					</li>
+
+
+
+
+
+					<!--////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+
+
+
+					<li>
+						<a>JUNIOR</a>
+
+
+
+
+
+						<div class="accordion-content">
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 5" name="CLASS FIVE">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Kindergarten
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 6" name="CLASS SIX">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class I
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 7" name="CLASS SEVEN">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class II
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 8" name="CLASS EIGHT">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class III
+								</label>
+							</div>
+
+
+						</div>
+					</li>
+
+
+
+
+
+					<!--////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+
+
+					<li>
+						<a>SENIOR</a>
+
+
+
+
+
+						<div class="accordion-content">
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 9" name="CLASS NINE">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Kindergarten
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 10" name="CLASS TEN">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class I
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 11" name="CLASS ELEVEN">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class II
+								</label>
+							</div>
+
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="Class 12" name="CLASS TWELVE">
+									<span class="custom-checkbox"><i class="icon-check"></i></span> Class III
+								</label>
+							</div>
+
+
+						</div>
+					</li>
+
+
+
+
+
+					<!--////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+
+
+
+
+
+				</ul>
+				<!-- / accordion -->
+
+
+			</div>
+
+
+
+			<!-- <input type="submit" id="button" value="Save and Continue" >-->
+			<div id="resultDiv">
+				{{error}}
+			</div>
+
+			<div id="loading-image" class="center-gif" style="display: none">
+				<img src="img/ajax-loader.gif">
+			</div>
+
+		</div>
+		<script src="js/custom.js"></script>
+	</ion-content>
+</ion-view>

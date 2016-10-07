@@ -1,0 +1,186 @@
+<ion-view view-title="Alerts" ng-controller="AlertsCtrl" ng-init="init()">
+	<ion-content>
+
+
+		<div class="wrapper">
+
+
+			<div class="content-wrapper">
+
+				<div class="cant-load">
+					cant load
+				</div>
+				<div class="msg-div" ng-click="goAlerts();" ng-show="toggle_alerts1">
+					You Have Received New Notification
+				</div>
+
+
+				<div id="loading-image" class="center-gif" style="display: none">
+					<img src="img/ajax-loader.gif">
+				</div>
+
+				<div class="dates-row" ng-repeat="notification in notifications">
+
+
+
+					<div class="dates-row-child">
+
+						<div class="date-left-col">
+
+
+
+							<div class="left-col-date">
+
+								<div class="d-month">
+									{{notification.month}}
+								</div>
+
+								<div class="d-date">
+									{{notification.day}}
+								</div>
+
+								<div class="d-year">
+									{{notification.year}}
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+						<div class="date-right-col">
+
+
+
+
+							<div class="holiday-name">
+
+								<div style="display: inline-block">
+									{{notification.class_edit}}
+								</div>
+
+
+
+							</div>
+
+							<div class="holiday-detail"> {{notification.msg}} </div>
+
+
+
+						</div>
+
+
+					</div>
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="bottom-margin-big">
+
+				</div>
+
+
+
+
+			</div>
+
+
+
+
+		</div>
+
+
+	</ion-content>
+	<div class="bottom-nav">
+
+
+		<a href="#/alerts" class="bottom-nav-button-active">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_alerts_on.svg">
+				<div class="notifications-alert" ng-show="toggle_alerts">
+					{{alertsPopUp}}
+				</div>
+
+
+			</div>
+
+			<div class="bottom-nav-text"> Alerts</div>
+
+		</a>
+
+		<a href="#/calendar" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_calendar.svg">
+
+			</div>
+
+			<div class="bottom-nav-text"> Calendar </div>
+
+		</a>
+
+
+
+		<a href="#/feeds" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_feeds.svg">
+
+			</div>
+
+
+			<div class="bottom-nav-text"> Feeds </div>
+
+		</a>
+
+
+
+		<a href="#/settings" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_settings.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Settings </div>
+
+		</a>
+
+
+		<a href="#/contact" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_contact.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Contact </div>
+
+		</a>
+
+
+
+
+	</div>
+</ion-view>

@@ -1,0 +1,270 @@
+<ion-view view-title="Contact" ng-controller="ContactCtrl" ng-init="init()">
+	<ion-content>
+
+
+		<div class="wrapper">
+
+
+
+			<div class="content-wrapper">
+
+
+				<div class="cant-load">
+					cant load
+				</div>
+				<!--<div class="msg-div" ng-click="goAlerts();" ng-show="toggle_alerts">
+					You Have Received New Notification
+				</div>-->
+				<div class="content-padding contact-page">
+
+					<h2 class="contact-heading">DEFENCE CAMPUS</h2>
+
+					<strong class="contact-sub-heading">Address:</strong>
+					<p>SL-3, 12th Street,</p>
+					<p>Off: Khayaban-e-Shaheen, Phase VIII D.H.A.,</p>
+					<p>Karachi, Pakistan</p>
+
+					<br>
+
+
+					<strong class="contact-sub-heading">Telephone:</strong>
+
+					<p>Nursery & Primary School Office</p>
+					<p>+92-21-35857257-60</p>
+
+					<p>Junior & Senior School Office</p>
+					<p>+92-21-35854083-85</p>
+
+					<br>
+
+					<strong class="contact-sub-heading">Email:</strong>
+					<p>General Queries</p>
+					<p><a href="mailto:bayviewacd@cyber.net.pk"> bayviewacd@cyber.net.pk </a></p>
+					<p><a href="mailto:info@bva.edu.pk"> info@bva.edu.pk</a></p>
+					<p>Career Opportunities</p>
+					<p><a href="mailto:employment@bva.edu.pk"> employment@bva.edu.pk</a></p>
+
+					<p>Cambridge Registration No: PK533</p>
+
+
+
+
+				</div>
+
+
+
+
+
+
+				<div class="border-bottom">
+
+				</div>
+
+
+				<div class="content-padding contact-page">
+
+					<h2 class="contact-heading">CLIFTON CAMPUS</h2>
+
+					<strong class="contact-sub-heading">Address:</strong>
+					<p>SL-3, 12th Street,</p>
+					<p>Off: Khayaban-e-Shaheen, Phase VIII D.H.A.,</p>
+					<p>Karachi, Pakistan</p>
+
+					<br>
+
+
+					<strong class="contact-sub-heading">Telephone:</strong>
+
+					<p>Nursery & Primary School Office</p>
+					<p>+92-21-35857257-60</p>
+
+					<p>Junior & Senior School Office</p>
+					<p>+92-21-35854083-85</p>
+
+					<br>
+
+					<strong class="contact-sub-heading">Email:</strong>
+					<p>General Queries</p>
+					<p><a href="mailto:bayviewacd@cyber.net.pk"> bayviewacd@cyber.net.pk </a></p>
+					<p><a href="mailto:info@bva.edu.pk"> info@bva.edu.pk</a></p>
+					<p>Career Opportunities</p>
+					<p><a href="mailto:employment@bva.edu.pk"> employment@bva.edu.pk</a></p>
+
+					<p>Cambridge Registration No: PK533</p>
+
+
+
+
+
+
+				</div>
+
+
+				<div class="border-bottom">
+
+				</div>
+
+
+				<div class="content-padding contact-page">
+
+					<h2 class="contact-heading">PECHS CAMPUS</h2>
+
+					<strong class="contact-sub-heading">Address:</strong>
+					<p>SL-3, 12th Street,</p>
+					<p>Off: Khayaban-e-Shaheen, Phase VIII D.H.A.,</p>
+					<p>Karachi, Pakistan</p>
+
+					<br>
+
+
+					<strong class="contact-sub-heading">Telephone:</strong>
+
+					<p>Nursery & Primary School Office</p>
+					<p>+92-21-35857257-60</p>
+
+					<p>Junior & Senior School Office</p>
+					<p>+92-21-35854083-85</p>
+
+					<br>
+
+					<strong class="contact-sub-heading">Email:</strong>
+					<p>General Queries</p>
+					<p><a href="mailto:bayviewacd@cyber.net.pk"> bayviewacd@cyber.net.pk </a></p>
+					<p><a href="mailto:info@bva.edu.pk"> info@bva.edu.pk</a></p>
+					<p>Career Opportunities</p>
+					<p><a href="mailto:employment@bva.edu.pk"> employment@bva.edu.pk</a></p>
+
+					<p>Cambridge Registration No: PK533</p>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<div class="bottom-margin-big">
+
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+		</div>
+
+	</ion-content>
+	<div class="bottom-nav">
+
+
+		<a href="#/alerts" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_alerts.svg">
+				<div class="notifications-alert" ng-show="toggle_alerts" >
+					{{alertsPopUp}}
+				</div>
+
+
+			</div>
+
+			<div class="bottom-nav-text"> Alerts</div>
+
+		</a>
+
+		<a href="#/calendar" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_calendar.svg">
+
+			</div>
+
+			<div class="bottom-nav-text"> Calendar </div>
+
+		</a>
+
+
+
+		<a href="#/feeds" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+				<img src="img/icon_feeds.svg">
+
+			</div>
+
+
+			<div class="bottom-nav-text"> Feeds </div>
+
+		</a>
+
+
+
+		<a href="#/settings" class="bottom-nav-button">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_settings.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Settings </div>
+
+		</a>
+
+
+		<a href="#/contact" class="bottom-nav-button-active">
+
+
+			<div class="image-and-notifications">
+
+				<img src="img/icon_contact_on.svg">
+				<!-- <div class="notifications-alert">
+
+           </div>-->
+			</div>
+
+			<div class="bottom-nav-text"> Contact </div>
+
+		</a>
+
+
+
+
+	</div>
+</ion-view>

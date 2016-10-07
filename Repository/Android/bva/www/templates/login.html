@@ -1,0 +1,49 @@
+<ion-view view-title="Login" ng-controller="LoginCtrl" ng-init="init()">
+	<ion-content class="login-bg">
+
+
+		<div class="wrapper">
+
+
+			<div class="content-wrapper">
+				
+
+				<div class=" home-bg">
+
+				</div>
+
+				<div class="landing-logo">
+
+					<img src="img/logo.png">
+
+
+				</div>
+				<div class="login-row">
+					<div class="enter-phone-number">
+						Please enter the mobile number you have registered with BVA
+					</div>
+					<!--<form method="post" id="myForm1" action="http://www.farazmalik.com/netpace/login.php">-->
+
+
+					<form method="post" id="myForm1" action="http://110.93.225.42/wp-content/mobile-app/phone-authentication.php">
+						<input name="phoneNumber" type="tel" id="phoneNumber" placeholder="xxxx-xxxxxxx" class="phone phone-login" ng-model="phoneNumber" maxlength="12" required>
+						<input name="email" type="email" id="email" placeholder="enter email here" class="phone-login" ng-model="email" style="margin-top: 16px;" maxlength="50" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" required>
+						<div id="resultDiv" class="login-error-msg"></div>
+						<!--<div id="loading-image" style="display: none">
+					<div class="loader-modal">
+						
+					</div>
+							<img src="img/ajax-loader.gif" class="gif-setter">
+				</div>  -->
+						<div id="loading-image" class="center-landing" style="display: none">
+							<img src="img/ajax-loader.gif">
+						</div>
+						<input type="submit" value="Next" class="login-btn" id="button">
+					</form>
+					<div class="help-text"> For further help please call <a href="#">+92-21-35854083-85</a></div>
+				</div>
+
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
